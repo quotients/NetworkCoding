@@ -270,6 +270,192 @@ public:
   /** @brief called by other MAC modules in order to translate host name into MAC address */
 
 protected:
+
+  //-----------------------------------VARIAVEIS PARA O NETCODE-----------------------------------------//
+
+     /* int N_MOTES;
+
+      int NOTSEND_CHANCE;
+
+      int NUM_SLOTS = (2*N_MOTES);
+
+      int SLOT_DURATION;
+
+      int MSG_SIZE;
+
+      int N_NEIGHBORS;
+
+      int SUBSET_SIZE;
+
+      int DYN;
+
+      int N_COOP;
+
+      //Variáveis do funcionamento do NetCod                  Valores iniciais:
+          uint8_t beacon_present;                                 //= 0
+
+          uint32_t SourceMote[2];                                 //= endereco
+          uint32_t DestinationMote[2];                            //= BROADCAST
+          uint8_t msdu_payload[100];                              //= Any
+
+          uint8_t state;                                          //= 0 (= 1 no Coord.)
+          uint8_t slots_count;                                    //= Any
+          uint8_t notsent_chance;                                 //= 0 (=NOTSENT_CHANCE no Coord.)
+          uint32_t time_elapsed;                                  //= 0
+          uint32_t random;                                        //= seed
+
+          uint8_t neighborhood[N_MOTES + 1][N_NEIGHBORS];         //= Predef
+          uint8_t best_neighbors[N_MOTES - 1];                    //= Any
+          uint8_t change_retransmitters;                          //= Any (= 1 no Coord.)
+          uint8_t n_retransmitters;                               //= 0
+          uint8_t retransmitters[N_MOTES];                        //= Any
+          uint8_t new_n_retransmitters;                           //= 0
+          uint8_t new_retransmitters[N_MOTES];                    //= Any
+          uint8_t received[N_MOTES + 1];                          //= Any
+          uint8_t i_am_retransmitter;                             //= 0
+          uint8_t buffer_msg[N_MOTES + 1][MSG_SIZE];              //= Any
+          uint16_t losses_estimative;                             //= (1/3) N_MOTES
+          uint16_t losses_sample;                                 //= Any
+          uint16_t deviation_estimative;                          //= 0
+          uint16_t deviation_sample;                              //= Any
+          uint8_t n_equations;                                    //= Any
+          uint8_t matrix[N_MOTES - 1][N_MOTES + 1];               //= Any
+          uint8_t combination[N_MOTES + 1][MSG_SIZE];             //= Any
+
+          //Variáveis de contagem para o Coordenador
+          uint16_t n_data;                                        //= 0
+          uint16_t n_success;                                     //= 0
+          uint16_t n_decoded;                                     //= 0
+          uint16_t n_messages;                                    //= 0
+          uint16_t n_received;                                    //= 0
+          int32_t jitter_sum;                                     //= 0
+          int32_t jitter_square;                                  //= 0
+          uint16_t nmsg_coord;                                    //= 0
+          uint16_t n_ret_sum;                                     //= 0
+
+          */
+
+  //----------------------------------MÉTODOS DO NETCODE------------------------------------------------//
+
+
+          // FUNÇÕES PARA ESCOLHER OS RETRANSMISSORES
+
+
+           /*
+            * gera uma lista dos melhores nodos, e a armazena no vetor best_neighbors[]
+            * (como ainda não temos critério de escolha, os melhores nodos são selecionados aleatoriamente).
+           */
+           virtual void classify_neighboors();
+
+           /*
+            * escolhe os proximos nodos que serão cooperantes e armazena esta lista no vetor new_retransmitters[].
+            * Isto acontece a cada 15 ciclos. A escolha se baseia na lista de melhores nodos (best_neighbors[]),
+            * e no número de nodos que cada candidato 'conhece'. Observe que esta função escolhe apenas os 'próximos' retransmissores,
+            * mas eles ainda não entram em ação, pois o coordenador precisa avisar pelos próximos 5 ciclos, através do BloCop, quais nodos foram eleitos.
+            */
+           virtual void choose_new_retransmitters();
+
+           /*
+            * muda os nodos cooperantes. Em termos da estrutura de código,
+            * ela copia o conteúdo do vetor  new_retransmitters[] para o vetor retransmitters[]
+            */
+           virtual void update_retransmitters();
+
+           // FUNÇÕES DE CODIFICAÇÃO A 8 BITS
+
+           /*
+            * retorna a multiplicação a 8bits dos argumentos a e b;
+            */
+           virtual uint8_t mult(uint8_t a, uint8_t b);
+
+           /*
+            * retorna o número inverso do argumento a, de acordo com a multiplicação de 8 bits da função acima;
+            */
+           virtual uint8_t inv(uint8_t a);
+
+           // FUNÇÕES DE ENVIO
+
+           /*
+            * faz o nodo enviar o conteúdo a ser transmitido diretamente ao coordenador;
+            */
+           virtual void mote_sends();
+
+           /*
+            * faz o nodo cooperante enviar a retransmissão;
+            */
+           virtual void mote_retransmitts();
+
+           /*
+            * faz o nodo coordenador enviar o BloCop;
+            */
+           virtual void coordinator_blockack();
+
+           /*
+            * faz o coordenador enviar uma mensagem contendo os resultados contabilizados.
+            * Esta mensagem não tem nenhum propósito para os demais nodos, serve apenas para ser capturada pelo Zena,
+            * que irá gerar o relatório;
+            */
+           virtual void coordinator_report();
+
+           // FUNÇÕES PARA TRATAMENTO DOS SLOTS
+
+           /*
+            * usada pelo coordenador para iniciar um novo ciclo de transmissão;
+            */
+           virtual void reset_cycle();
+
+           /*
+            * usada pelo coordenador para iniciar um novo slot, e é chamada quando estoura o timer que conta os slots
+            */
+           virtual void slot_fired();
+
+           // FUNÇÕES PARA DECIFRAR AS MENSAGENS CODIFICADAS
+
+           /*
+            * função auxiliar para trocar duas linhas (i1 e i2) da matriz de mensagens combinadas;
+            */
+           virtual void swap_line(uint8_t i1, uint8_t i2);
+
+           /*
+            * função auxiliar para combinar duas linhas. A linha i2 é somada (xor) com a linha i1 multiplicada pelo argumento c;
+            */
+           virtual void combine_line(uint8_t c, uint8_t i1, uint8_t i2);
+
+           /*
+            * usada para fazer escalonamento da matriz, a partir do pivô localizado na linha 'row' e na coluna 'col';
+            */
+           virtual void clear_column(uint8_t row, uint8_t col);
+
+           /*
+            * é a função que tenta resolver a matriz, e por consequência, decifrar as mensagens codificadas;
+            */
+           virtual void solve_system();
+
+           /* COMANDOS DA INTERFACE StdControl
+
+           virtual command result_t StdControl_start();
+
+           // EVENTOS DOS TIMERS
+
+           virtual event result_t Timer_fired();
+
+           virtual event result_t Timer_slots_fired();
+
+           virtual event result_t Timer_duration_fired();
+
+           // EVENTOS DO MAC
+
+           virtual event result_t MLME_BEACON_NOTIFY_indication(uint8_t BSN, PANDescriptor pan_descriptor, uint8_t PenAddrSpec, uint8_t AddrList, uint8_t sduLength, uint8_t sdu[]);
+
+           virtual event result_t MCPS_DATA_sd_fired();
+
+           virtual event result_t MCPS_DATA_indication(uint16_t SrcAddrMode, uint16_t SrcPANId, uint32_t SrcAddr[2], uint16_t DstAddrMode, uint16_t DestPANId, uint32_t DstAddr[2], uint16_t msduLength,uint8_t msdu[100],uint16_t mpduLinkQuality, uint16_t SecurityUse, uint16_t ACLEntry);
+
+       */
+
+
+   //---------------------------------------------------------------------------------------------------------------------------------------------------//
+
   /** @brief the bit rate at which we transmit */
   double bitrate;
 

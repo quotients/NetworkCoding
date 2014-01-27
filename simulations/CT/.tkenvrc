@@ -1,2 +1,9 @@
 # Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "CT" "CT" "2" "513x563+369+125:normal"
+inspector "CT.host[9].nic" "IEEE802154_CT_NIC" "2" "158x341+10+358:normal"
+inspector "CT.host[10].nic" "IEEE802154_CT_NIC" "2" "146x341+9+4:normal"
+inspector "CT.host[11].nic" "IEEE802154_CT_NIC" "2" "143x341+908+386:normal"
+inspector "CT.host[12].nic" "IEEE802154_CT_NIC" "2" "152x341+186+378:normal"
+inspector "CT.host[13].nic" "IEEE802154_CT_NIC" "2" "142x341+922+3:normal"
+inspector "CT.host[1].nic" "IEEE802154_CT_NIC" "2" "149x341+1098+298:normal"
 

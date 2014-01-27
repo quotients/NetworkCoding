@@ -207,7 +207,7 @@ void MAC_CT_NC::initialize(int stage)
         dataTransMode           = par("dataTransMode");
         panCoorName             = par("panCoorName");
         isRecvGTS               = par("isRecvGTS");
-        gtsPayload = par("gtsPayload");
+        gtsPayload              = par("gtsPayload");
         ack4Gts                 = par("ack4Gts");
 
         if (mpib.macBeaconOrder >15 || mpib.macSuperframeOrder > mpib.macBeaconOrder)
@@ -1923,6 +1923,29 @@ void MAC_CT_NC::MCPS_DATA_indication(Ieee802154Frame* tmpData)
     delete tmpData;
     EV << "[MAC]: sending received " << appframe->getName() << " frame to upper layer" << endl;
     send(appframe, mUpperLayerOut);
+}
+
+/******************************* <TDMA Functions> *******************************/
+
+void MAC_CT_NC::resetCycle()
+{
+    int i;
+
+    for (i = 0; i < N_MOTES; i++)
+        received[i] = 0;
+
+    if (state==2)
+        state++;
+
+    if (isCoordinator)
+    {
+
+    }
+}
+
+void MAC_CT_NC::slotFired()
+{
+
 }
 
 //-------------------------------------------------------------------------------/

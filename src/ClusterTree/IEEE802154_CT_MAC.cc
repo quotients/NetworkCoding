@@ -218,7 +218,7 @@ void IEEE802154_CT_MAC::initialize(int stage)
         if (dataTransMode != 1 && dataTransMode!= 3)
             error("[MAC]: data transfer mode = %d is not supported in the model!", dataTransMode);
 
-        panStartTime        = 0.0;
+        panStartTime    = 0.0;
         ack4Data        = true;
         secuData        = false;
         secuBeacon      = false;
@@ -227,49 +227,49 @@ void IEEE802154_CT_MAC::initialize(int stage)
 
         // for beacon
         rxBO                = 15;
-        rxSO                    = 15;
+        rxSO                = 15;
         beaconWaitingTx     = false;
-        notAssociated           = true;
-        bcnLossCounter = 0;
+        notAssociated       = true;
+        bcnLossCounter      = 0;
 
         // for transmission
-        inTransmission          = false;
+        inTransmission      = false;
         waitBcnCmdAck       = false;
         waitBcnCmdUpperAck  = false;
         waitDataAck         = false;
-        waitGTSAck = false;
+        waitGTSAck          = false;
         numBcnCmdRetry      = 0;
         numBcnCmdUpperRetry = 0;
-        numDataRetry            = 0;
-        numGTSRetry = 0;
+        numDataRetry        = 0;
+        numGTSRetry         = 0;
 
         // for CSMA-CA
         csmacaWaitNextBeacon    = false;
         backoffStatus           = 0;
 
         // for timer
-        lastTime_bcnRxTimer = 0;
+        lastTime_bcnRxTimer     = 0;
         inTxSD_txSDTimer        = false;
         inRxSD_rxSDTimer        = false;
-        index_gtsTimer = 0;
+        index_gtsTimer          = 0;
 
         // device capability
-        capability.alterPANCoor         = false;
+        capability.alterPANCoor     = false;
         capability.FFD              = true;
         //capability.mainsPower     = false;
         capability.recvOnWhenIdle   = mpib.macRxOnWhenIdle;
         capability.secuCapable      = false;
-        capability.alloShortAddr        = true;
-        capability.hostName = getParentModule()->getParentModule()->getFullName();
+        capability.alloShortAddr    = true;
+        capability.hostName         = getParentModule()->getParentModule()->getFullName();
 
         // GTS variables for PAN coordinator
         gtsCount = 0;
         for (int i=0; i<7; i++)
         {
             gtsList[i].devShortAddr = def_macShortAddress;  // 0xffff
-            gtsList[i].startSlot        = 0;
+            gtsList[i].startSlot    = 0;
             gtsList[i].length       = 0;
-            gtsList[i].isRecvGTS        = false;
+            gtsList[i].isRecvGTS    = false;
             gtsList[i].isTxPending  = false;
         }
         tmp_finalCap = aNumSuperframeSlots - 1; // 15 if no GTS
@@ -290,20 +290,20 @@ void IEEE802154_CT_MAC::initialize(int stage)
 
         numUpperPkt         = 0;
         numUpperPktLost     = 0;
-        numCollision            = 0;
-        numLostBcn = 0;
+        numCollision        = 0;
+        numLostBcn          = 0;
         numTxBcnPkt         = 0;
         numTxDataSucc       = 0;
-        numTxDataFail           = 0;
-        numTxGTSSucc = 0;
-        numTxGTSFail = 0;
+        numTxDataFail       = 0;
+        numTxGTSSucc        = 0;
+        numTxGTSFail        = 0;
         numTxAckPkt         = 0;
         numRxBcnPkt         = 0;
-        numRxDataPkt            = 0;
-        numRxGTSPkt = 0;
+        numRxDataPkt        = 0;
+        numRxGTSPkt         = 0;
         numRxAckPkt         = 0;
 
-        numTxAckInactive        = 0;
+        numTxAckInactive    = 0;
 
         WATCH(inTxSD_txSDTimer);
         WATCH(inRxSD_rxSDTimer);
@@ -328,18 +328,18 @@ void IEEE802154_CT_MAC::initialize(int stage)
     else if (1 == stage)
     {
         // initialize timers
-        backoffTimer                = new cMessage("backoffTimer",      MAC_BACKOFF_TIMER);
+        backoffTimer            = new cMessage("backoffTimer",      MAC_BACKOFF_TIMER);
         deferCCATimer           = new cMessage("deferCCATimer",     MAC_DEFER_CCA_TIMER);
         bcnRxTimer              = new cMessage("bcnRxTimer",        MAC_BCN_RX_TIMER);
         bcnTxTimer              = new cMessage("bcnTxTimer",        MAC_BCN_TX_TIMER);
         ackTimeoutTimer         = new cMessage("ackTimeoutTimer",   MAC_ACK_TIMEOUT_TIMER);
         txAckBoundTimer         = new cMessage("txAckBoundTimer",   MAC_TX_ACK_BOUND_TIMER);
         txCmdDataBoundTimer     = new cMessage("txCmdDataBoundTimer",   MAC_TX_CMD_DATA_BOUND_TIMER);
-        ifsTimer                    = new cMessage("ifsTimer",          MAC_IFS_TIMER);
+        ifsTimer                = new cMessage("ifsTimer",          MAC_IFS_TIMER);
         txSDTimer               = new cMessage("txSDTimer",         MAC_TX_SD_TIMER);
         rxSDTimer               = new cMessage("rxSDTimer",         MAC_RX_SD_TIMER);
-        finalCAPTimer               = new cMessage("finalCAPTimer",     MAC_FINAL_CAP_TIMER);
-        gtsTimer                    = new cMessage("gtsTimer",      MAC_GTS_TIMER);
+        finalCAPTimer           = new cMessage("finalCAPTimer",     MAC_FINAL_CAP_TIMER);
+        gtsTimer                = new cMessage("gtsTimer",      MAC_GTS_TIMER);
         // get initial radio state, channel number, transmit power etc. from Phy layer in this stage
     }
     else if (2 == stage)
@@ -351,6 +351,7 @@ void IEEE802154_CT_MAC::initialize(int stage)
         EV << "MAC extended address is: " << aExtendedAddress << endl;
         EV << "mpib.macBSN initialized with: " << (int)mpib.macBSN << endl;
         EV << "mpib.macDSN initialized with: " << (int)mpib.macDSN << endl;
+
         // start a pan coordinator or a device
         if (isPANCoor)
         {

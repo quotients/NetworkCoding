@@ -2,7 +2,7 @@ package networkcoding.ClusterTree;
 simple IEEE802154_CT_MAC
 {
 	parameters:
-	    
+	    	    
 	    bool isCoordinator;
 	    double beaconOffset;    
         // debug switch

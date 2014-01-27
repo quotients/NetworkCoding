@@ -292,6 +292,16 @@ protected:
   virtual void    startDevice    ();
   virtual void    startCoordinator (simtime_t);
 
+  //Functions of Network Coding
+
+  virtual void    selectCooperators();
+  virtual void    startCooperator();
+  virtual void    encodePackets();
+  virtual void    decodePackets();
+
+  //Network Coding variables
+
+
   /**
   * @name Message handling functions
   */
@@ -369,6 +379,15 @@ protected:
   virtual simtime_t    csmacaAdjustTime    (simtime_t wtime);
   virtual simtime_t    csmacaLocateBoundary    (bool toParent, simtime_t wtime);
   virtual simtime_t    getFinalCAP    (char trxType);
+  //@}
+
+  /*
+   * Funções do TDMA
+   */
+  //@{
+  virtual void resetCycle();// Usada pelo coordenador para iniciar novo ciclo de transmissão
+
+  virtual void slotFired();// Usada pelo coordenador para iniciar um novo slot, chamada quando estoura o timer que conta os slots
   //@}
 
   /**

@@ -1,14 +1,14 @@
 version 2
-run General-0-20130302-15:29:04-5920
+run General-0-20140126-22:31:33-1036
 attr configname General
-attr datetime 20130302-15:29:04
+attr datetime 20140126-22:31:33
 attr experiment General
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvars2 $repetition=0
 attr measurement ""
 attr network CT
-attr processid 5920
+attr processid 1036
 attr repetition 0
 attr replication #0
 attr resultdir results
@@ -16,12 +16,12 @@ attr runnumber 0
 attr seedset 0
 
 scalar CT.host[0].app 	trafficSent 	0
-scalar CT.host[0].app 	"total bytes received" 	0
+scalar CT.host[0].app 	"total bytes received" 	268590
 scalar CT.host[0].net 	"num of pkts forwarded" 	0
 scalar CT.host[0].nic.ifq 	queueLength:max 	0
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[0].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[0].nic.ifq 	queueLength:timeavg 	0
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[0].nic.ifq 	queueingTime:histogram
@@ -80,16 +80,31 @@ attr title  "received packets, count"
 scalar CT.host[0].nic.ifq 	rcvdPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[0].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[0].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[0].nic.mac 	"total num of upper pkts received" 	0
+scalar CT.host[0].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[0].nic.mac 	"num of BEACON pkts sent" 	18311
+scalar CT.host[0].nic.mac 	"num of DATA pkts sent successfully" 	0
+scalar CT.host[0].nic.mac 	"num of DATA pkts failed" 	0
+scalar CT.host[0].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[0].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[0].nic.mac 	"num of ACK pkts sent" 	28305
+scalar CT.host[0].nic.mac 	"num of BEACON pkts received" 	0
+scalar CT.host[0].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[0].nic.mac 	"num of DATA pkts received" 	26859
+scalar CT.host[0].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[0].nic.mac 	"num of ACK pkts received" 	0
+scalar CT.host[0].nic.mac 	"num of collisions" 	8650
+scalar CT.host[0].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[0].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[0].nic.phy 	lossRate:max 	0.54
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[0].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[0].nic.phy 	lossRate:timeavg 	0.23304948815445
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[0].nic.phy 	radioState:count 	1
+scalar CT.host[0].nic.phy 	radioState:count 	359765
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[0].nic.phy 	channelNo:histogram
@@ -114,61 +129,61 @@ scalar CT.host[0].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[0].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[0].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[1].app 	trafficSent 	0
+scalar CT.host[1].app 	trafficSent 	3565
 scalar CT.host[1].app 	"total bytes received" 	0
-scalar CT.host[1].net 	"num of pkts forwarded" 	0
-scalar CT.host[1].nic.ifq 	queueLength:max 	0
+scalar CT.host[1].net 	"num of pkts forwarded" 	17693
+scalar CT.host[1].nic.ifq 	queueLength:max 	5
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[1].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[1].nic.ifq 	queueLength:timeavg 	0.0069711594465447
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[1].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 21258
+field mean 0.0059027599039329
+field stddev 0.058349462212465
+field sum 125.48087003781
+field sqrsum 73.113535551836
 field min 0
-field max 0
+field max 0.8687115
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.1732863424925	0
+bin	-0.15018149682683	0
+bin	-0.12707665116117	0
+bin	-0.1039718054955	0
+bin	-0.080866959829833	0
+bin	-0.057762114164167	0
+bin	-0.0346572684985	0
+bin	-0.011552422832833	20938
+bin	0.011552422832833	21
+bin	0.0346572684985	5
+bin	0.057762114164167	13
+bin	0.080866959829833	19
+bin	0.1039718054955	17
+bin	0.12707665116117	8
+bin	0.15018149682683	8
+bin	0.1732863424925	5
+bin	0.19639118815817	9
+bin	0.21949603382383	8
+bin	0.2426008794895	11
+bin	0.26570572515517	10
+bin	0.28881057082083	14
+bin	0.3119154164865	12
+bin	0.33502026215217	14
+bin	0.35812510781783	7
+bin	0.3812299534835	7
+bin	0.40433479914917	8
+bin	0.42743964481483	10
+bin	0.4505444904805	7
+bin	0.47364933614617	3
+bin	0.49675418181183	7
+bin	0.5198590274775	97
 scalar CT.host[1].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -177,22 +192,37 @@ scalar CT.host[1].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[1].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[1].nic.ifq 	rcvdPk:count 	21258
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[1].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[1].nic.ifq 	rcvdPk:sum(packetBytes) 	212580
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[1].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[1].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[1].nic.mac 	"total num of upper pkts received" 	21258
+scalar CT.host[1].nic.mac 	"num of upper pkts dropped" 	17693
+scalar CT.host[1].nic.mac 	"num of BEACON pkts sent" 	18311
+scalar CT.host[1].nic.mac 	"num of DATA pkts sent successfully" 	3243
+scalar CT.host[1].nic.mac 	"num of DATA pkts failed" 	322
+scalar CT.host[1].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[1].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[1].nic.mac 	"num of ACK pkts sent" 	17693
+scalar CT.host[1].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[1].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[1].nic.mac 	"num of DATA pkts received" 	17693
+scalar CT.host[1].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[1].nic.mac 	"num of ACK pkts received" 	3243
+scalar CT.host[1].nic.mac 	"num of collisions" 	3328
+scalar CT.host[1].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[1].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[1].nic.phy 	lossRate:max 	0.18
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[1].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[1].nic.phy 	lossRate:timeavg 	0.046285589312433
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[1].nic.phy 	radioState:count 	1
+scalar CT.host[1].nic.phy 	radioState:count 	441900
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[1].nic.phy 	channelNo:histogram
@@ -217,61 +247,61 @@ scalar CT.host[1].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[1].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[1].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[2].app 	trafficSent 	0
+scalar CT.host[2].app 	trafficSent 	3692
 scalar CT.host[2].app 	"total bytes received" 	0
 scalar CT.host[2].net 	"num of pkts forwarded" 	0
-scalar CT.host[2].nic.ifq 	queueLength:max 	0
+scalar CT.host[2].nic.ifq 	queueLength:max 	3
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[2].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[2].nic.ifq 	queueLength:timeavg 	0.0046831379118571
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[2].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3692
+field mean 0.022832200003637
+field stddev 0.096549876751321
+field sum 84.296482413427
+field sqrsum 36.331728430333
 field min 0
-field max 0
+field max 0.799180056405
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.285275360688	0
+bin	-0.2472386459296	0
+bin	-0.2092019311712	0
+bin	-0.1711652164128	0
+bin	-0.1331285016544	0
+bin	-0.095091786896	0
+bin	-0.0570550721376	0
+bin	-0.0190183573792	3407
+bin	0.0190183573792	26
+bin	0.0570550721376	25
+bin	0.095091786896	28
+bin	0.1331285016544	19
+bin	0.1711652164128	22
+bin	0.2092019311712	16
+bin	0.2472386459296	15
+bin	0.285275360688	15
+bin	0.3233120754464	22
+bin	0.3613487902048	17
+bin	0.3993855049632	12
+bin	0.4374222197216	12
+bin	0.47545893448	9
+bin	0.5134956492384	7
+bin	0.5515323639968	12
+bin	0.5895690787552	5
+bin	0.6276057935136	5
+bin	0.665642508272	5
+bin	0.7036792230304	5
+bin	0.7417159377888	5
+bin	0.7797526525472	3
+bin	0.8177893673056	0
+bin	0.855826082064	0
 scalar CT.host[2].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -280,22 +310,37 @@ scalar CT.host[2].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[2].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[2].nic.ifq 	rcvdPk:count 	3692
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[2].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[2].nic.ifq 	rcvdPk:sum(packetBytes) 	36920
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[2].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[2].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[2].nic.mac 	"total num of upper pkts received" 	3692
+scalar CT.host[2].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[2].nic.mac 	"num of BEACON pkts sent" 	18311
+scalar CT.host[2].nic.mac 	"num of DATA pkts sent successfully" 	3373
+scalar CT.host[2].nic.mac 	"num of DATA pkts failed" 	319
+scalar CT.host[2].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[2].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[2].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[2].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[2].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[2].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[2].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[2].nic.mac 	"num of ACK pkts received" 	3373
+scalar CT.host[2].nic.mac 	"num of collisions" 	2606
+scalar CT.host[2].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[2].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[2].nic.phy 	lossRate:max 	0.24
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[2].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[2].nic.phy 	lossRate:timeavg 	0.04834046039126
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[2].nic.phy 	radioState:count 	1
+scalar CT.host[2].nic.phy 	radioState:count 	300254
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[2].nic.phy 	channelNo:histogram
@@ -320,61 +365,61 @@ scalar CT.host[2].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[2].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[2].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[3].app 	trafficSent 	0
+scalar CT.host[3].app 	trafficSent 	3634
 scalar CT.host[3].app 	"total bytes received" 	0
 scalar CT.host[3].net 	"num of pkts forwarded" 	0
-scalar CT.host[3].nic.ifq 	queueLength:max 	0
+scalar CT.host[3].nic.ifq 	queueLength:max 	3
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[3].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[3].nic.ifq 	queueLength:timeavg 	0.0044954270561266
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[3].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3634
+field mean 0.022266837372118
+field stddev 0.094797395113609
+field sum 80.917687010278
+field sqrsum 34.449903032329
 field min 0
-field max 0
+field max 0.80736260322
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.225567187739	0
+bin	-0.19549156270713	0
+bin	-0.16541593767527	0
+bin	-0.1353403126434	0
+bin	-0.10526468761153	0
+bin	-0.075189062579667	0
+bin	-0.0451134375478	0
+bin	-0.015037812515933	3365
+bin	0.015037812515933	10
+bin	0.0451134375478	13
+bin	0.075189062579667	16
+bin	0.10526468761153	22
+bin	0.1353403126434	20
+bin	0.16541593767527	20
+bin	0.19549156270713	17
+bin	0.225567187739	18
+bin	0.25564281277087	15
+bin	0.28571843780273	11
+bin	0.3157940628346	12
+bin	0.34586968786647	10
+bin	0.37594531289833	5
+bin	0.4060209379302	13
+bin	0.43609656296207	12
+bin	0.46617218799393	5
+bin	0.4962478130258	9
+bin	0.52632343805767	7
+bin	0.55639906308953	6
+bin	0.5864746881214	1
+bin	0.61655031315327	8
+bin	0.64662593818513	5
+bin	0.676701563217	14
 scalar CT.host[3].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -383,22 +428,37 @@ scalar CT.host[3].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[3].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[3].nic.ifq 	rcvdPk:count 	3634
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[3].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[3].nic.ifq 	rcvdPk:sum(packetBytes) 	36340
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[3].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[3].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[3].nic.mac 	"total num of upper pkts received" 	3634
+scalar CT.host[3].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[3].nic.mac 	"num of BEACON pkts sent" 	18311
+scalar CT.host[3].nic.mac 	"num of DATA pkts sent successfully" 	3320
+scalar CT.host[3].nic.mac 	"num of DATA pkts failed" 	314
+scalar CT.host[3].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[3].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[3].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[3].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[3].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[3].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[3].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[3].nic.mac 	"num of ACK pkts received" 	3320
+scalar CT.host[3].nic.mac 	"num of collisions" 	2602
+scalar CT.host[3].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[3].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[3].nic.phy 	lossRate:max 	0.22
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[3].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[3].nic.phy 	lossRate:timeavg 	0.047862107868418
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[3].nic.phy 	radioState:count 	1
+scalar CT.host[3].nic.phy 	radioState:count 	300075
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[3].nic.phy 	channelNo:histogram
@@ -423,61 +483,61 @@ scalar CT.host[3].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[3].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[3].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[4].app 	trafficSent 	0
+scalar CT.host[4].app 	trafficSent 	3636
 scalar CT.host[4].app 	"total bytes received" 	0
 scalar CT.host[4].net 	"num of pkts forwarded" 	0
-scalar CT.host[4].nic.ifq 	queueLength:max 	0
+scalar CT.host[4].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[4].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[4].nic.ifq 	queueLength:timeavg 	0.0050158949208975
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[4].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3636
+field mean 0.02483116297474
+field stddev 0.10221846122676
+field sum 90.286108576155
+field sqrsum 40.222620295997
 field min 0
-field max 0
+field max 0.795696838195
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.1244739506085	0
+bin	-0.1078774238607	0
+bin	-0.0912808971129	0
+bin	-0.0746843703651	0
+bin	-0.0580878436173	0
+bin	-0.0414913168695	0
+bin	-0.0248947901217	0
+bin	-0.0082982633739	3350
+bin	0.0082982633739	8
+bin	0.0248947901217	8
+bin	0.0414913168695	12
+bin	0.0580878436173	12
+bin	0.0746843703651	11
+bin	0.0912808971129	9
+bin	0.1078774238607	7
+bin	0.1244739506085	9
+bin	0.1410704773563	5
+bin	0.1576670041041	4
+bin	0.1742635308519	8
+bin	0.1908600575997	8
+bin	0.2074565843475	11
+bin	0.2240531110953	7
+bin	0.2406496378431	9
+bin	0.2572461645909	9
+bin	0.2738426913387	5
+bin	0.2904392180865	8
+bin	0.3070357448343	8
+bin	0.3236322715821	4
+bin	0.3402287983299	3
+bin	0.3568253250777	9
+bin	0.3734218518255	112
 scalar CT.host[4].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -486,22 +546,37 @@ scalar CT.host[4].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[4].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[4].nic.ifq 	rcvdPk:count 	3636
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[4].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[4].nic.ifq 	rcvdPk:sum(packetBytes) 	36360
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[4].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[4].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[4].nic.mac 	"total num of upper pkts received" 	3636
+scalar CT.host[4].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[4].nic.mac 	"num of BEACON pkts sent" 	18310
+scalar CT.host[4].nic.mac 	"num of DATA pkts sent successfully" 	3325
+scalar CT.host[4].nic.mac 	"num of DATA pkts failed" 	311
+scalar CT.host[4].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[4].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[4].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[4].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[4].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[4].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[4].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[4].nic.mac 	"num of ACK pkts received" 	3325
+scalar CT.host[4].nic.mac 	"num of collisions" 	2847
+scalar CT.host[4].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[4].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[4].nic.phy 	lossRate:max 	0.2
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[4].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[4].nic.phy 	lossRate:timeavg 	0.052714227447095
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[4].nic.phy 	radioState:count 	1
+scalar CT.host[4].nic.phy 	radioState:count 	299277
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[4].nic.phy 	channelNo:histogram
@@ -526,61 +601,61 @@ scalar CT.host[4].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[4].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[4].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[5].app 	trafficSent 	0
+scalar CT.host[5].app 	trafficSent 	3467
 scalar CT.host[5].app 	"total bytes received" 	0
 scalar CT.host[5].net 	"num of pkts forwarded" 	0
-scalar CT.host[5].nic.ifq 	queueLength:max 	0
+scalar CT.host[5].nic.ifq 	queueLength:max 	3
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[5].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[5].nic.ifq 	queueLength:timeavg 	0.0041032255338046
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[5].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3467
+field mean 0.02130316112157
+field stddev 0.094638365607492
+field sum 73.858059608483
+field sqrsum 32.616362712642
 field min 0
-field max 0
+field max 0.831834063914
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.3221251263795	0
+bin	-0.2791751095289	0
+bin	-0.2362250926783	0
+bin	-0.1932750758277	0
+bin	-0.1503250589771	0
+bin	-0.1073750421265	0
+bin	-0.0644250252759	0
+bin	-0.0214750084253	3233
+bin	0.0214750084253	18
+bin	0.0644250252759	23
+bin	0.1073750421265	20
+bin	0.1503250589771	24
+bin	0.1932750758277	18
+bin	0.2362250926783	12
+bin	0.2791751095289	14
+bin	0.3221251263795	13
+bin	0.3650751432301	13
+bin	0.4080251600807	16
+bin	0.4509751769313	13
+bin	0.4939251937819	11
+bin	0.5368752106325	11
+bin	0.5798252274831	6
+bin	0.6227752443337	10
+bin	0.6657252611843	6
+bin	0.7086752780349	2
+bin	0.7516252948855	2
+bin	0.7945753117361	2
+bin	0.8375253285867	0
+bin	0.8804753454373	0
+bin	0.9234253622879	0
+bin	0.9663753791385	0
 scalar CT.host[5].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -589,22 +664,37 @@ scalar CT.host[5].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[5].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[5].nic.ifq 	rcvdPk:count 	3467
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[5].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[5].nic.ifq 	rcvdPk:sum(packetBytes) 	34670
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[5].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[5].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[5].nic.mac 	"total num of upper pkts received" 	3467
+scalar CT.host[5].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[5].nic.mac 	"num of BEACON pkts sent" 	18310
+scalar CT.host[5].nic.mac 	"num of DATA pkts sent successfully" 	3138
+scalar CT.host[5].nic.mac 	"num of DATA pkts failed" 	329
+scalar CT.host[5].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[5].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[5].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[5].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[5].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[5].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[5].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[5].nic.mac 	"num of ACK pkts received" 	3138
+scalar CT.host[5].nic.mac 	"num of collisions" 	2755
+scalar CT.host[5].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[5].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[5].nic.phy 	lossRate:max 	0.2
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[5].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[5].nic.phy 	lossRate:timeavg 	0.050939512413698
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[5].nic.phy 	radioState:count 	1
+scalar CT.host[5].nic.phy 	radioState:count 	298335
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[5].nic.phy 	channelNo:histogram
@@ -629,61 +719,61 @@ scalar CT.host[5].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[5].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[5].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[6].app 	trafficSent 	0
+scalar CT.host[6].app 	trafficSent 	3563
 scalar CT.host[6].app 	"total bytes received" 	0
 scalar CT.host[6].net 	"num of pkts forwarded" 	0
-scalar CT.host[6].nic.ifq 	queueLength:max 	0
+scalar CT.host[6].nic.ifq 	queueLength:max 	4
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[6].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[6].nic.ifq 	queueLength:timeavg 	0.018295920199601
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[6].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3563
+field mean 0.092429571594952
+field stddev 0.34876534121884
+field sum 329.32656359281
+field sqrsum 463.71144483254
 field min 0
-field max 0
+field max 4.530969666305
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-1.071756777102	0
+bin	-0.9288558734884	0
+bin	-0.7859549698748	0
+bin	-0.6430540662612	0
+bin	-0.5001531626476	0
+bin	-0.357252259034	0
+bin	-0.2143513554204	0
+bin	-0.0714504518068	3152
+bin	0.0714504518068	81
+bin	0.2143513554204	58
+bin	0.357252259034	48
+bin	0.5001531626476	31
+bin	0.6430540662612	24
+bin	0.7859549698748	30
+bin	0.9288558734884	26
+bin	1.071756777102	23
+bin	1.2146576807156	25
+bin	1.3575585843292	10
+bin	1.5004594879428	9
+bin	1.6433603915564	9
+bin	1.78626129517	8
+bin	1.9291621987836	1
+bin	2.0720631023972	9
+bin	2.2149640060108	3
+bin	2.3578649096244	4
+bin	2.500765813238	2
+bin	2.6436667168516	2
+bin	2.7865676204652	1
+bin	2.9294685240788	2
+bin	3.0723694276924	2
+bin	3.215270331306	3
 scalar CT.host[6].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -692,22 +782,37 @@ scalar CT.host[6].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[6].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[6].nic.ifq 	rcvdPk:count 	3563
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[6].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[6].nic.ifq 	rcvdPk:sum(packetBytes) 	35630
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[6].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[6].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[6].nic.mac 	"total num of upper pkts received" 	3563
+scalar CT.host[6].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[6].nic.mac 	"num of BEACON pkts sent" 	18310
+scalar CT.host[6].nic.mac 	"num of DATA pkts sent successfully" 	3283
+scalar CT.host[6].nic.mac 	"num of DATA pkts failed" 	280
+scalar CT.host[6].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[6].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[6].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[6].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[6].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[6].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[6].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[6].nic.mac 	"num of ACK pkts received" 	3283
+scalar CT.host[6].nic.mac 	"num of collisions" 	343
+scalar CT.host[6].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[6].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[6].nic.phy 	lossRate:max 	0.1
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[6].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[6].nic.phy 	lossRate:timeavg 	0.021101567500078
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[6].nic.phy 	radioState:count 	1
+scalar CT.host[6].nic.phy 	radioState:count 	202311
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[6].nic.phy 	channelNo:histogram
@@ -732,61 +837,61 @@ scalar CT.host[6].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[6].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[6].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[7].app 	trafficSent 	0
+scalar CT.host[7].app 	trafficSent 	3544
 scalar CT.host[7].app 	"total bytes received" 	0
 scalar CT.host[7].net 	"num of pkts forwarded" 	0
-scalar CT.host[7].nic.ifq 	queueLength:max 	0
+scalar CT.host[7].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[7].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[7].nic.ifq 	queueLength:timeavg 	0.0041368141430248
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[7].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3544
+field mean 0.021010907046966
+field stddev 0.094683102822125
+field sum 74.462654574446
+field sqrsum 33.327133042103
 field min 0
-field max 0
+field max 0.819793875941
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.1962383891575	0
+bin	-0.17007327060317	0
+bin	-0.14390815204883	0
+bin	-0.1177430334945	0
+bin	-0.091577914940167	0
+bin	-0.065412796385833	0
+bin	-0.0392476778315	0
+bin	-0.013082559277167	3301
+bin	0.013082559277167	17
+bin	0.0392476778315	12
+bin	0.065412796385833	13
+bin	0.091577914940167	14
+bin	0.1177430334945	9
+bin	0.14390815204883	13
+bin	0.17007327060317	8
+bin	0.1962383891575	15
+bin	0.22240350771183	13
+bin	0.24856862626617	10
+bin	0.2747337448205	8
+bin	0.30089886337483	12
+bin	0.32706398192917	12
+bin	0.3532291004835	9
+bin	0.37939421903783	8
+bin	0.40555933759217	9
+bin	0.4317244561465	6
+bin	0.45788957470083	4
+bin	0.48405469325517	2
+bin	0.5102198118095	7
+bin	0.53638493036383	3
+bin	0.56255004891817	5
+bin	0.5887151674725	34
 scalar CT.host[7].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -795,22 +900,37 @@ scalar CT.host[7].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[7].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[7].nic.ifq 	rcvdPk:count 	3544
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[7].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[7].nic.ifq 	rcvdPk:sum(packetBytes) 	35440
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[7].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[7].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[7].nic.mac 	"total num of upper pkts received" 	3544
+scalar CT.host[7].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[7].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[7].nic.mac 	"num of DATA pkts sent successfully" 	3200
+scalar CT.host[7].nic.mac 	"num of DATA pkts failed" 	344
+scalar CT.host[7].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[7].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[7].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[7].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[7].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[7].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[7].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[7].nic.mac 	"num of ACK pkts received" 	3200
+scalar CT.host[7].nic.mac 	"num of collisions" 	2798
+scalar CT.host[7].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[7].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[7].nic.phy 	lossRate:max 	0.18
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[7].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[7].nic.phy 	lossRate:timeavg 	0.051753394990519
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[7].nic.phy 	radioState:count 	1
+scalar CT.host[7].nic.phy 	radioState:count 	189255
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[7].nic.phy 	channelNo:histogram
@@ -835,61 +955,61 @@ scalar CT.host[7].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[7].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[7].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[8].app 	trafficSent 	0
+scalar CT.host[8].app 	trafficSent 	3585
 scalar CT.host[8].app 	"total bytes received" 	0
 scalar CT.host[8].net 	"num of pkts forwarded" 	0
-scalar CT.host[8].nic.ifq 	queueLength:max 	0
+scalar CT.host[8].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[8].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[8].nic.ifq 	queueLength:timeavg 	0.0045297369598438
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[8].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3585
+field mean 0.022743449170764
+field stddev 0.096939132464918
+field sum 81.535265277188
+field sqrsum 35.533941485991
 field min 0
-field max 0
+field max 0.837064681045
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.276042643633	0
+bin	-0.23923695781527	0
+bin	-0.20243127199753	0
+bin	-0.1656255861798	0
+bin	-0.12881990036207	0
+bin	-0.092014214544333	0
+bin	-0.0552085287266	0
+bin	-0.018402842908867	3318
+bin	0.018402842908867	17
+bin	0.0552085287266	24
+bin	0.092014214544333	22
+bin	0.12881990036207	20
+bin	0.1656255861798	19
+bin	0.20243127199753	22
+bin	0.23923695781527	14
+bin	0.276042643633	8
+bin	0.31284832945073	14
+bin	0.34965401526847	15
+bin	0.3864597010862	21
+bin	0.42326538690393	5
+bin	0.46007107272167	16
+bin	0.4968767585394	8
+bin	0.53368244435713	9
+bin	0.57048813017487	10
+bin	0.6072938159926	5
+bin	0.64409950181033	6
+bin	0.68090518762807	5
+bin	0.7177108734458	1
+bin	0.75451655926353	2
+bin	0.79132224508127	2
+bin	0.828127930899	2
 scalar CT.host[8].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -898,22 +1018,37 @@ scalar CT.host[8].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[8].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[8].nic.ifq 	rcvdPk:count 	3585
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[8].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[8].nic.ifq 	rcvdPk:sum(packetBytes) 	35850
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[8].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[8].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[8].nic.mac 	"total num of upper pkts received" 	3585
+scalar CT.host[8].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[8].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[8].nic.mac 	"num of DATA pkts sent successfully" 	3249
+scalar CT.host[8].nic.mac 	"num of DATA pkts failed" 	336
+scalar CT.host[8].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[8].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[8].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[8].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[8].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[8].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[8].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[8].nic.mac 	"num of ACK pkts received" 	3249
+scalar CT.host[8].nic.mac 	"num of collisions" 	2881
+scalar CT.host[8].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[8].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[8].nic.phy 	lossRate:max 	0.24
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[8].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[8].nic.phy 	lossRate:timeavg 	0.053040833763272
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[8].nic.phy 	radioState:count 	1
+scalar CT.host[8].nic.phy 	radioState:count 	189473
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[8].nic.phy 	channelNo:histogram
@@ -938,61 +1073,61 @@ scalar CT.host[8].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[8].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[8].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[9].app 	trafficSent 	0
+scalar CT.host[9].app 	trafficSent 	3711
 scalar CT.host[9].app 	"total bytes received" 	0
 scalar CT.host[9].net 	"num of pkts forwarded" 	0
-scalar CT.host[9].nic.ifq 	queueLength:max 	0
+scalar CT.host[9].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[9].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[9].nic.ifq 	queueLength:timeavg 	0.0048302339381089
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[9].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3711
+field mean 0.0234287822382
+field stddev 0.10041797863146
+field sum 86.944210885961
+field sqrsum 39.447785288031
 field min 0
-field max 0
+field max 0.858551030423
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.322707314537	0
+bin	-0.27967967259873	0
+bin	-0.23665203066047	0
+bin	-0.1936243887222	0
+bin	-0.15059674678393	0
+bin	-0.10756910484567	0
+bin	-0.0645414629074	0
+bin	-0.021513820969133	3439
+bin	0.021513820969133	22
+bin	0.0645414629074	22
+bin	0.10756910484567	29
+bin	0.15059674678393	25
+bin	0.1936243887222	18
+bin	0.23665203066047	18
+bin	0.27967967259873	22
+bin	0.322707314537	15
+bin	0.36573495647527	15
+bin	0.40876259841353	12
+bin	0.4517902403518	12
+bin	0.49481788229007	13
+bin	0.53784552422833	14
+bin	0.5808731661666	6
+bin	0.62390080810487	10
+bin	0.66692845004313	4
+bin	0.7099560919814	7
+bin	0.75298373391967	4
+bin	0.79601137585793	2
+bin	0.8390390177962	2
+bin	0.88206665973447	0
+bin	0.92509430167273	0
+bin	0.968121943611	0
 scalar CT.host[9].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -1001,22 +1136,37 @@ scalar CT.host[9].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[9].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[9].nic.ifq 	rcvdPk:count 	3711
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[9].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[9].nic.ifq 	rcvdPk:sum(packetBytes) 	37110
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[9].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[9].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[9].nic.mac 	"total num of upper pkts received" 	3711
+scalar CT.host[9].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[9].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[9].nic.mac 	"num of DATA pkts sent successfully" 	3711
+scalar CT.host[9].nic.mac 	"num of DATA pkts failed" 	0
+scalar CT.host[9].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[9].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[9].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[9].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[9].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[9].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[9].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[9].nic.mac 	"num of ACK pkts received" 	3711
+scalar CT.host[9].nic.mac 	"num of collisions" 	136
+scalar CT.host[9].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[9].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[9].nic.phy 	lossRate:max 	0.06
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[9].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[9].nic.phy 	lossRate:timeavg 	0.0042497666459186
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[9].nic.phy 	radioState:count 	1
+scalar CT.host[9].nic.phy 	radioState:count 	161100
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[9].nic.phy 	channelNo:histogram
@@ -1041,61 +1191,61 @@ scalar CT.host[9].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[9].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[9].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[10].app 	trafficSent 	0
+scalar CT.host[10].app 	trafficSent 	3482
 scalar CT.host[10].app 	"total bytes received" 	0
 scalar CT.host[10].net 	"num of pkts forwarded" 	0
-scalar CT.host[10].nic.ifq 	queueLength:max 	0
+scalar CT.host[10].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[10].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[10].nic.ifq 	queueLength:timeavg 	0.0034162448344452
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[10].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3482
+field mean 0.017660082429642
+field stddev 0.084718754447474
+field sum 61.492407020013
+field sqrsum 26.070028639983
 field min 0
-field max 0
+field max 0.806493035807
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.283717199161	0
+bin	-0.24588823927287	0
+bin	-0.20805927938473	0
+bin	-0.1702303194966	0
+bin	-0.13240135960847	0
+bin	-0.094572399720333	0
+bin	-0.0567434398322	0
+bin	-0.018914479944067	3268
+bin	0.018914479944067	28
+bin	0.0567434398322	18
+bin	0.094572399720333	16
+bin	0.13240135960847	16
+bin	0.1702303194966	11
+bin	0.20805927938473	16
+bin	0.24588823927287	12
+bin	0.283717199161	18
+bin	0.32154615904913	7
+bin	0.35937511893727	9
+bin	0.3972040788254	7
+bin	0.43503303871353	6
+bin	0.47286199860167	10
+bin	0.5106909584898	11
+bin	0.54851991837793	14
+bin	0.58634887826607	6
+bin	0.6241778381542	0
+bin	0.66200679804233	3
+bin	0.69983575793047	3
+bin	0.7376647178186	1
+bin	0.77549367770673	2
+bin	0.81332263759487	0
+bin	0.851151597483	0
 scalar CT.host[10].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -1104,22 +1254,37 @@ scalar CT.host[10].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[10].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[10].nic.ifq 	rcvdPk:count 	3482
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[10].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[10].nic.ifq 	rcvdPk:sum(packetBytes) 	34820
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[10].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[10].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[10].nic.mac 	"total num of upper pkts received" 	3482
+scalar CT.host[10].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[10].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[10].nic.mac 	"num of DATA pkts sent successfully" 	3481
+scalar CT.host[10].nic.mac 	"num of DATA pkts failed" 	0
+scalar CT.host[10].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[10].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[10].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[10].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[10].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[10].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[10].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[10].nic.mac 	"num of ACK pkts received" 	3481
+scalar CT.host[10].nic.mac 	"num of collisions" 	135
+scalar CT.host[10].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[10].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[10].nic.phy 	lossRate:max 	0.06
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[10].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[10].nic.phy 	lossRate:timeavg 	0.0042267576044113
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[10].nic.phy 	radioState:count 	1
+scalar CT.host[10].nic.phy 	radioState:count 	160184
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[10].nic.phy 	channelNo:histogram
@@ -1144,61 +1309,61 @@ scalar CT.host[10].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[10].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[10].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[11].app 	trafficSent 	0
+scalar CT.host[11].app 	trafficSent 	3508
 scalar CT.host[11].app 	"total bytes received" 	0
 scalar CT.host[11].net 	"num of pkts forwarded" 	0
-scalar CT.host[11].nic.ifq 	queueLength:max 	0
+scalar CT.host[11].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[11].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[11].nic.ifq 	queueLength:timeavg 	0.0039628424681296
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[11].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3508
+field mean 0.020333855309673
+field stddev 0.092652233333762
+field sum 71.331164426332
+field sqrsum 31.556055826977
 field min 0
-field max 0
+field max 0.804363704128
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.362238305071	0
+bin	-0.31393986439487	0
+bin	-0.26564142371873	0
+bin	-0.2173429830426	0
+bin	-0.16904454236647	0
+bin	-0.12074610169033	0
+bin	-0.0724476610142	0
+bin	-0.024149220338067	3276
+bin	0.024149220338067	29
+bin	0.0724476610142	23
+bin	0.12074610169033	21
+bin	0.16904454236647	21
+bin	0.2173429830426	23
+bin	0.26564142371873	14
+bin	0.31393986439487	17
+bin	0.362238305071	15
+bin	0.41053674574713	15
+bin	0.45883518642327	9
+bin	0.5071336270994	8
+bin	0.55543206777553	12
+bin	0.60373050845167	6
+bin	0.6520289491278	9
+bin	0.70032738980393	7
+bin	0.74862583048007	2
+bin	0.7969242711562	1
+bin	0.84522271183233	0
+bin	0.89352115250847	0
+bin	0.9418195931846	0
+bin	0.99011803386073	0
+bin	1.0384164745369	0
+bin	1.086714915213	0
 scalar CT.host[11].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -1207,22 +1372,37 @@ scalar CT.host[11].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[11].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[11].nic.ifq 	rcvdPk:count 	3508
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[11].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[11].nic.ifq 	rcvdPk:sum(packetBytes) 	35080
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[11].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[11].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[11].nic.mac 	"total num of upper pkts received" 	3508
+scalar CT.host[11].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[11].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[11].nic.mac 	"num of DATA pkts sent successfully" 	3508
+scalar CT.host[11].nic.mac 	"num of DATA pkts failed" 	0
+scalar CT.host[11].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[11].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[11].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[11].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[11].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[11].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[11].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[11].nic.mac 	"num of ACK pkts received" 	3508
+scalar CT.host[11].nic.mac 	"num of collisions" 	152
+scalar CT.host[11].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[11].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[11].nic.phy 	lossRate:max 	0.06
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[11].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[11].nic.phy 	lossRate:timeavg 	0.0043793200251028
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[11].nic.phy 	radioState:count 	1
+scalar CT.host[11].nic.phy 	radioState:count 	159756
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[11].nic.phy 	channelNo:histogram
@@ -1247,61 +1427,61 @@ scalar CT.host[11].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[11].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[11].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[12].app 	trafficSent 	0
+scalar CT.host[12].app 	trafficSent 	3467
 scalar CT.host[12].app 	"total bytes received" 	0
 scalar CT.host[12].net 	"num of pkts forwarded" 	0
-scalar CT.host[12].nic.ifq 	queueLength:max 	0
+scalar CT.host[12].nic.ifq 	queueLength:max 	3
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[12].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[12].nic.ifq 	queueLength:timeavg 	0.0044892753019077
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[12].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3467
+field mean 0.023307457581292
+field stddev 0.10123272085826
+field sum 80.806955434338
+field sqrsum 37.403193721078
 field min 0
-field max 0
+field max 0.851493687239
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.3727774109175	0
+bin	-0.3230737561285	0
+bin	-0.2733701013395	0
+bin	-0.2236664465505	0
+bin	-0.1739627917615	0
+bin	-0.1242591369725	0
+bin	-0.0745554821835	0
+bin	-0.0248518273945	3224
+bin	0.0248518273945	26
+bin	0.0745554821835	19
+bin	0.1242591369725	25
+bin	0.1739627917615	23
+bin	0.2236664465505	16
+bin	0.2733701013395	23
+bin	0.3230737561285	12
+bin	0.3727774109175	18
+bin	0.4224810657065	20
+bin	0.4721847204955	17
+bin	0.5218883752845	6
+bin	0.5715920300735	13
+bin	0.6212956848625	6
+bin	0.6709993396515	5
+bin	0.7207029944405	6
+bin	0.7704066492295	4
+bin	0.8201103040185	4
+bin	0.8698139588075	0
+bin	0.9195176135965	0
+bin	0.9692212683855	0
+bin	1.0189249231745	0
+bin	1.0686285779635	0
+bin	1.1183322327525	0
 scalar CT.host[12].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -1310,22 +1490,37 @@ scalar CT.host[12].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[12].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[12].nic.ifq 	rcvdPk:count 	3467
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[12].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[12].nic.ifq 	rcvdPk:sum(packetBytes) 	34670
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[12].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[12].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[12].nic.mac 	"total num of upper pkts received" 	3467
+scalar CT.host[12].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[12].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[12].nic.mac 	"num of DATA pkts sent successfully" 	3466
+scalar CT.host[12].nic.mac 	"num of DATA pkts failed" 	1
+scalar CT.host[12].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[12].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[12].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[12].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[12].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[12].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[12].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[12].nic.mac 	"num of ACK pkts received" 	3466
+scalar CT.host[12].nic.mac 	"num of collisions" 	129
+scalar CT.host[12].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[12].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[12].nic.phy 	lossRate:max 	0.06
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[12].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[12].nic.phy 	lossRate:timeavg 	0.0041635835084616
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[12].nic.phy 	radioState:count 	1
+scalar CT.host[12].nic.phy 	radioState:count 	160176
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[12].nic.phy 	channelNo:histogram
@@ -1350,61 +1545,61 @@ scalar CT.host[12].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[12].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[12].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
-scalar CT.host[13].app 	trafficSent 	0
+scalar CT.host[13].app 	trafficSent 	3527
 scalar CT.host[13].app 	"total bytes received" 	0
 scalar CT.host[13].net 	"num of pkts forwarded" 	0
-scalar CT.host[13].nic.ifq 	queueLength:max 	0
+scalar CT.host[13].nic.ifq 	queueLength:max 	2
 attr interpolationmode  sample-hold
 attr title  "queue length, max"
-scalar CT.host[13].nic.ifq 	queueLength:timeavg 	-1.#IND
+scalar CT.host[13].nic.ifq 	queueLength:timeavg 	0.0036678726589251
 attr interpolationmode  sample-hold
 attr title  "queue length, timeavg"
 statistic CT.host[13].nic.ifq 	queueingTime:histogram
-field count 0
-field mean 0
-field stddev -1.#IND
-field sum 0
-field sqrsum 0
+field count 3527
+field mean 0.01871894183744
+field stddev 0.085845281728589
+field sum 66.021707860652
+field sqrsum 27.220404614437
 field min 0
-field max 0
+field max 0.789759932789
 attr interpolationmode  none
 attr title  "queueing time, histogram"
 bin	-INF	0
-bin	-0.5	0
-bin	-0.46666666666667	0
-bin	-0.43333333333333	0
-bin	-0.4	0
-bin	-0.36666666666667	0
-bin	-0.33333333333333	0
-bin	-0.3	0
-bin	-0.26666666666667	0
-bin	-0.23333333333333	0
-bin	-0.2	0
-bin	-0.16666666666667	0
-bin	-0.13333333333333	0
-bin	-0.1	0
-bin	-0.066666666666667	0
-bin	-0.033333333333333	0
-bin	-6.9388939039072e-018	0
-bin	0.033333333333333	0
-bin	0.066666666666667	0
-bin	0.1	0
-bin	0.13333333333333	0
-bin	0.16666666666667	0
-bin	0.2	0
-bin	0.23333333333333	0
-bin	0.26666666666667	0
-bin	0.3	0
-bin	0.33333333333333	0
-bin	0.36666666666667	0
-bin	0.4	0
-bin	0.43333333333333	0
-bin	0.46666666666667	0
-bin	0.5	0
+bin	-0.169534086351	0
+bin	-0.1469295415042	0
+bin	-0.1243249966574	0
+bin	-0.1017204518106	0
+bin	-0.0791159069638	0
+bin	-0.056511362117	0
+bin	-0.0339068172702	0
+bin	-0.0113022724234	3284
+bin	0.0113022724234	19
+bin	0.0339068172702	13
+bin	0.056511362117	12
+bin	0.0791159069638	17
+bin	0.1017204518106	10
+bin	0.1243249966574	9
+bin	0.1469295415042	10
+bin	0.169534086351	11
+bin	0.1921386311978	12
+bin	0.2147431760446	11
+bin	0.2373477208914	7
+bin	0.2599522657382	11
+bin	0.282556810585	5
+bin	0.3051613554318	9
+bin	0.3277659002786	10
+bin	0.3503704451254	7
+bin	0.3729749899722	11
+bin	0.395579534819	4
+bin	0.4181840796658	10
+bin	0.4407886245126	5
+bin	0.4633931693594	6
+bin	0.4859977142062	1
+bin	0.508602259053	33
 scalar CT.host[13].nic.ifq 	dropPk:count 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
@@ -1413,22 +1608,37 @@ scalar CT.host[13].nic.ifq 	dropPk:sum(packetBytes) 	0
 attr interpolationmode  none
 attr source  dropPkByQueue
 attr title  "dropped packets, sum(packetBytes)"
-scalar CT.host[13].nic.ifq 	rcvdPk:count 	0
+scalar CT.host[13].nic.ifq 	rcvdPk:count 	3527
 attr interpolationmode  none
 attr title  "received packets, count"
-scalar CT.host[13].nic.ifq 	rcvdPk:sum(packetBytes) 	0
+scalar CT.host[13].nic.ifq 	rcvdPk:sum(packetBytes) 	35270
 attr interpolationmode  none
 attr title  "received packets, sum(packetBytes)"
-scalar CT.host[13].nic.phy 	lossRate:min 	-1.#IND
+scalar CT.host[13].nic.mac 	"Total simulation time" 	18000
+scalar CT.host[13].nic.mac 	"total num of upper pkts received" 	3527
+scalar CT.host[13].nic.mac 	"num of upper pkts dropped" 	0
+scalar CT.host[13].nic.mac 	"num of BEACON pkts sent" 	0
+scalar CT.host[13].nic.mac 	"num of DATA pkts sent successfully" 	3527
+scalar CT.host[13].nic.mac 	"num of DATA pkts failed" 	0
+scalar CT.host[13].nic.mac 	"num of DATA pkts sent successfully in GTS" 	0
+scalar CT.host[13].nic.mac 	"num of DATA pkts failed in GTS" 	0
+scalar CT.host[13].nic.mac 	"num of ACK pkts sent" 	0
+scalar CT.host[13].nic.mac 	"num of BEACON pkts received" 	18311
+scalar CT.host[13].nic.mac 	"num of BEACON pkts lost" 	0
+scalar CT.host[13].nic.mac 	"num of DATA pkts received" 	0
+scalar CT.host[13].nic.mac 	"num of DATA pkts received in GTS" 	0
+scalar CT.host[13].nic.mac 	"num of ACK pkts received" 	3527
+scalar CT.host[13].nic.mac 	"num of collisions" 	139
+scalar CT.host[13].nic.phy 	lossRate:min 	0
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, min"
-scalar CT.host[13].nic.phy 	lossRate:max 	-1.#IND
+scalar CT.host[13].nic.phy 	lossRate:max 	0.08
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, max"
-scalar CT.host[13].nic.phy 	lossRate:timeavg 	-1.#IND
+scalar CT.host[13].nic.phy 	lossRate:timeavg 	0.0045357884885868
 attr interpolationmode  backward-sample-hold
 attr title  "packet loss rate, timeavg"
-scalar CT.host[13].nic.phy 	radioState:count 	1
+scalar CT.host[13].nic.phy 	radioState:count 	160448
 attr interpolationmode  sample-hold
 attr title  "radio state (enum), count"
 statistic CT.host[13].nic.phy 	channelNo:histogram
@@ -1453,7 +1663,7 @@ scalar CT.host[13].nic.phy 	bitrate:max 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, max"
 attr unit  bps
-scalar CT.host[13].nic.phy 	bitrate:timeavg 	-1.#IND
+scalar CT.host[13].nic.phy 	bitrate:timeavg 	250000
 attr interpolationmode  sample-hold
 attr title  "tx bitrate, timeavg"
 attr unit  bps
